@@ -21,14 +21,47 @@ body {
   align-items: center;
 }
 
+@media (width <1000px) {
+  .faq-card {
+    display: grid;
+    width: 90%;
+    margin-top: 5rem;
+  }
+}
+
 .faq-left-image-box {
   background-color: transparent;
+}
+
+@media (width <1000px) {
+  .faq-left-image-box {
+    position: relative;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .faq-left-image {
   position: absolute;
   margin-left: -10rem;
   margin-top: -4rem;
+}
+
+@media (width <1000px) {
+  .faq-left-image {
+    content: url(images/illustration-woman-online-mobile.svg);
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -240px 0px;
+    height: 400px;
+    position: absolute;
+    bottom: -200px;
+    margin: 0;
+    padding-bottom: 30px;
+    overflow: visible;
+  }
 }
 
 .faq-main-container {
@@ -38,6 +71,12 @@ body {
   border-radius: 1.5rem;
   box-shadow: 0 7px 29px -10px;
   padding-right: 2rem;
+}
+
+@media (width <1000px) {
+  .faq-main-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .faq-center-image-box {
@@ -50,9 +89,22 @@ body {
   padding-bottom: 6rem;
 }
 
+@media (width <1000px) {
+  .faq-center-image-box {
+    background-image: none;
+  }
+}
+
 .faq-center-image {
   margin: auto 0 auto -7rem;
   /* margin: auto; */
+}
+
+@media (width <1000px) {
+  .faq-center-image {
+    width: 0;
+    margin: 0;
+  }
 }
 
 .faq-content {
