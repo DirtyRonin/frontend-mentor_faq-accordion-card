@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Kumbh+Sans');
+
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  font-family: 'Kumbh Sans', serif;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.faq-card {
+  display: flex;
+  width: 70rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.faq-left-image-box {
+  background-color: transparent;
+}
+
+.faq-left-image {
+  position: absolute;
+  margin-left: -10rem;
+  margin-top: -4rem;
+}
+
+.faq-main-container {
+  display: grid;
+  grid-template-columns: 400px auto;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 7px 29px -10px;
+  padding-right: 2rem;
+}
+
+.faq-center-image-box {
+  display: flex;
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-position: 101% 65%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.faq-center-image {
+  margin: auto 0 auto -7rem;
+  /* margin: auto; */
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  margin: 0;
+  list-style-type: none;
+}
+
+.faq-content h1 {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.faq-content-header {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.accordion {
+  opacity: 1;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 0.2px solid hsl(240, 5%, 91%);
+  padding: 0.75rem 0;
+}
+
+.accordion-label {
+  font-weight: 400;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.accordion-label:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.accordion-expanded {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.75s, max-height 0.25s ease-in;
+  z-index: -1;
+}
+
+.accordion input {
+  display: none;
+}
+
+input[type='radio']:checked ~ .accordion-expanded {
+  max-height: 10rem;
+  opacity: 1;
+  transition: opacity 0.75s, max-height 0.5s ease-out;
+  z-index: 99;
+}
+
+input[type='radio']:checked ~ .accordion-label {
+  font-weight: 700;
+  cursor: default;
+  color: black;
+}
+
+input[type='radio']:checked ~ img {
+  transform: rotate(180deg);
+}
